@@ -5,6 +5,13 @@
 
 In this lab, we'll practice applying gradient descent.  As we know gradient descent begins with an initial regression line, and moves to a "best fit" regression line by changing values of $m$ and $b$ and evaluating the RSS.  So far, we have illustrated this technique by changing the values of $b$ and evaluating the RSS.  In this lab, we will work through applying our technique by changing the value of $m$ instead.  Let's get started.
 
+## Objectives
+
+You will be able to:
+
+- Understand how to go from RSS to finding a "best fit" line
+- Understand how gradient descent can be used to find the best intercept for your linear regression model
+
 ## Setting up our initial regression line
 
 Once again, we'll take take a look at revenues our data example, which looks like this:
@@ -26,7 +33,7 @@ plt.ylabel("y", fontsize=14);
 ```
 
 
-![png](index_files/index_5_0.png)
+![png](index_files/index_6_0.png)
 
 
 We can start with some values for an initial not-so-accurate regression line, $y = 43x + 12$.
@@ -52,7 +59,7 @@ plt.ylabel("y", fontsize=14);
 ```
 
 
-![png](index_files/index_8_0.png)
+![png](index_files/index_9_0.png)
 
 
 
@@ -156,7 +163,7 @@ plt.title("RSS with changes to intercept", fontsize=16);
 ```
 
 
-![png](index_files/index_19_0.png)
+![png](index_files/index_20_0.png)
 
 
 ## Looking at the slope of our cost curve
@@ -230,7 +237,7 @@ plt.title("RSS with changes to slope", fontsize=16);
 ```
 
 
-![png](index_files/index_27_0.png)
+![png](index_files/index_28_0.png)
 
 
 As you can see, it seems pretty accurate.  When the curve is steeper and downwards at $b = 3$, the slope is around -232.73.  And at $b = 6$ with our cost curve becoming flatter, our slope is around -52.73. 
@@ -385,7 +392,7 @@ plt.ylabel("y", fontsize=14);
 ```
 
 
-![png](index_files/index_43_0.png)
+![png](index_files/index_44_0.png)
 
 
 As you can see, this final intercept value of around $b=6.8$ better matches our data. Remember that the slope was kept constant. You can see that lifting the slope upwards could probably even lead to a better fit!
