@@ -51,8 +51,13 @@ y = 3+ 50* x + y_randterm
 plt.plot(x, y, '.b')
 plt.plot(x, regression_formula(x), '-')
 plt.xlabel("x", fontsize=14)
-plt.ylabel("y", fontsize=14);
+plt.ylabel("y", fontsize=14)
+plt.show()
 ```
+
+
+![png](index_files/index_9_0.png)
+
 
 
 ```python
