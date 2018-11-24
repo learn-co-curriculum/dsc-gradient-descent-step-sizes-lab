@@ -74,13 +74,6 @@ Now using the `residual_sum_squares`, function, we calculate the RSS to measure 
 residual_sum_squares(x, y , 43, 12) 
 ```
 
-
-
-
-    1117.8454014417434
-
-
-
 ### Building a cost curve
 
 Now let's use the `residual_sum_squares` function to build a cost curve.  Keeping the $m$ value fixed at $43$, write a function called `rss_values`.  
