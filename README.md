@@ -32,10 +32,6 @@ plt.xlabel("x", fontsize=14)
 plt.ylabel("y", fontsize=14);
 ```
 
-
-![png](index_files/index_6_0.png)
-
-
 We can start with some values for an initial not-so-accurate regression line, $y = 43x + 12$.
 
 
@@ -57,10 +53,6 @@ plt.plot(x, regression_formula(x), '-')
 plt.xlabel("x", fontsize=14)
 plt.ylabel("y", fontsize=14);
 ```
-
-
-![png](index_files/index_9_0.png)
-
 
 
 ```python
@@ -218,7 +210,7 @@ x_6 = np.linspace(6-1, 6+1, 100)
 rss_3 = residual_sum_squares(x, y, 43, 3)
 rss_6 = residual_sum_squares(x, y, 43, 6)
 
-tan_3 = rss_3+slope_3*(x_4-3)
+tan_3 = rss_3+slope_3*(x_3-3)
 tan_6 = rss_6+slope_6*(x_6-6)
 ```
 
@@ -226,7 +218,7 @@ tan_6 = rss_6+slope_6*(x_6-6)
 ```python
 plt.figure(figsize=(10,7))
 plt.plot(bval_RSS[:,0], bval_RSS[:,1], '-')
-plt.plot(x_4, tan_4, color = "red",  label = "slope =" + str(round(slope_4,2)))
+plt.plot(x_3, tan_3, color = "red",  label = "slope =" + str(round(slope_3,2)))
 plt.plot(x_6, tan_6, color = "green",  label = "slope =" + str(round(slope_6,2)))
 
 plt.xlabel("b-values", fontsize=14)
@@ -238,6 +230,10 @@ plt.title("RSS with changes to slope", fontsize=16);
 
 
 ![png](index_files/index_28_0.png)
+
+
+
+![png](index_files/index_28_1.png)
 
 
 As you can see, it seems pretty accurate.  When the curve is steeper and downwards at $b = 3$, the slope is around -232.73.  And at $b = 6$ with our cost curve becoming flatter, our slope is around -52.73. 
