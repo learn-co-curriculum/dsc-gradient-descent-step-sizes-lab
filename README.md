@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab, we'll practice applying gradient descent.  As we know gradient descent begins with an initial regression line, and moves to a "best fit" regression line by changing values of $m$ and $b$ and evaluating the RSS.  So far, we have illustrated this technique by changing the values of $b$ and evaluating the RSS.  In this lab, we will work through applying our technique by changing the value of $m$ instead.  Let's get started.
+In this lab, we'll practice applying gradient descent.  As we know gradient descent begins with an initial regression line, and moves to a "best fit" regression line by changing values of $m$ and $b$ and evaluating the RSS.  So far, we have illustrated this technique by changing the values of $m$ and evaluating the RSS.  In this lab, we will work through applying our technique by changing the value of $b$ instead.  Let's get started.
 
 ## Objectives
 
