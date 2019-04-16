@@ -56,7 +56,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_9_0.png)
+![png](index_files/index_4_0.png)
 
 
 
@@ -160,7 +160,7 @@ plt.title("RSS with changes to intercept", fontsize=16);
 ```
 
 
-![png](index_files/index_20_0.png)
+![png](index_files/index_13_0.png)
 
 
 ## Looking at the slope of our cost curve
@@ -234,7 +234,7 @@ plt.title("RSS with changes to slope", fontsize=16);
 ```
 
 
-![png](index_files/index_28_0.png)
+![png](index_files/index_20_0.png)
 
 
 As you can see, it seems pretty accurate.  When the curve is steeper and downwards at $b = 3$, the slope is around -232.73.  And at $b = 6$ with our cost curve becoming flatter, our slope is around -52.73. 
@@ -389,7 +389,7 @@ plt.ylabel("y", fontsize=14);
 ```
 
 
-![png](index_files/index_44_0.png)
+![png](index_files/index_32_0.png)
 
 
 As you can see, this final intercept value of around $b=6.8$ better matches our data. Remember that the slope was kept constant. You can see that lifting the slope upwards could probably even lead to a better fit!
