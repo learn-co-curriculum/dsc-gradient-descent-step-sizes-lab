@@ -9,8 +9,8 @@ In this lab, you'll practice applying gradient descent.  As you know, gradient d
 
 You will be able to:
 
-- Understand how to go from RSS to finding a "best fit" line
-- Understand how gradient descent can be used to find the best intercept for your linear regression model
+- Use gradient descent to find the optimal parameters for a linear regression model
+- Describe how to use an RSS curve to find the optimal parameters for a linear regression model
 
 ## Setting up our initial regression line
 
