@@ -744,6 +744,19 @@ def gradient_descent(x_values, y_values, steps, current_b, learning_rate, m):
 
 
 ```python
+# __SOLUTION__ 
+def gradient_descent(x_values, y_values, steps, current_b, learning_rate, m):
+    cost_curve = []
+    for i in range(steps):
+        current_cost_slope = slope_at(x_values, y_values, m, current_b)
+        current_rss = residual_sum_squares(x_values, y_values, m, current_b)
+        cost_curve.append({'b': current_b, 'rss': round(current_rss,2), 'slope': round(current_cost_slope,2)})
+        current_b = updated_b(current_b, learning_rate, current_cost_slope)
+    return cost_curve
+```
+
+
+```python
 descent_steps = gradient_descent(x, y, 15, 0, learning_rate = .005, m = 43)
 descent_steps
 
@@ -762,19 +775,6 @@ descent_steps
 # {'b': 6.7836322770506285, 'rss': 331.49, 'slope': -5.71},
 # {'b': 6.812195895074922, 'rss': 331.35, 'slope': -4.0},
 # {'b': 6.832190427692808, 'rss': 331.28, 'slope': -2.8}]
-```
-
-
-```python
-# __SOLUTION__ 
-def gradient_descent(x_values, y_values, steps, current_b, learning_rate, m):
-    cost_curve = []
-    for i in range(steps):
-        current_cost_slope = slope_at(x_values, y_values, m, current_b)
-        current_rss = residual_sum_squares(x_values, y_values, m, current_b)
-        cost_curve.append({'b': current_b, 'rss': round(current_rss,2), 'slope': round(current_cost_slope,2)})
-        current_b = updated_b(current_b, learning_rate, current_cost_slope)
-    return cost_curve
 ```
 
 
@@ -813,6 +813,7 @@ Remember that each of these steps indicates a change in our regression line's sl
 
 
 ```python
+# __SOLUTION__
 fig, ax = plt.subplots()
 ax.scatter(x, y, marker=".", c="b")
 ax.plot(x, x*43 + 6.83, color='#17becf', label=f'$y = 43x + 6.83$')
