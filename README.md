@@ -490,6 +490,21 @@ Compared to the initial RSS of 1117.8 when $b$ was 12, we are down to 331.3!
 
 Remember that each of these steps indicates a change in our regression line's slope value towards a "fit" that more accurately matches our dataset.  Let's plot the final regression line as found before, with $m=43$ and $b=6.83$
 
+
+```python
+fig, ax = plt.subplots()
+ax.scatter(x, y, marker=".", c="b")
+ax.plot(x, x*43 + 6.83, color='#17becf', label=f'$y = 43x + 6.83$')
+ax.set_xlabel("x", fontsize=14)
+ax.set_ylabel("y", fontsize=14)
+fig.suptitle("Revenues", fontsize=16)
+ax.legend();
+```
+
+
+![png](index_files/index_40_0.png)
+
+
 As you can see, this final intercept value of around $b=6.8$ matches our data much better than the previous guess of 12. Remember that the slope was kept constant. You can see that lifting the slope upwards could probably even lead to a better fit!
 
 ## Summary
